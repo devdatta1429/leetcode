@@ -1,7 +1,8 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        if type(s.strip().split(" ")[-1])==str: 
-            return len(s.strip().split()[-1]) 
+        s=s.rstrip().split(" ")[-1]
+        if type(s)==str: 
+            return len(s) 
 
     
 #    class Solution:
