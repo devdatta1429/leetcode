@@ -7,4 +7,4 @@ class Solution:
             if remain in dic:
                 return dic[remain],i
             
-            dic[num] = i  
+            dic[num] = i  # here if that value is not in dic it will add that value
