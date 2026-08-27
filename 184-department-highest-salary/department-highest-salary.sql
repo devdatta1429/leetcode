@@ -1,10 +1,15 @@
 # Write your MySQL query statement below
-with high_sal as(
-    select e.departmentid,e.name as Employee,e.salary,d.name as department, 
-    dense_rank()over(partition by e.departmentid order by e.salary desc) as as_sal
-    from Employee e join department d on e.departmentid=d.id
+with exam as (
+    select e.id,
+            e.name as Employee,
+            e.salary as Salary,
+            e.departmentId,
+            d.id as D_id,
+            d.name as Department,
+            dense_rank() over (partition by d.name order by e.salary desc) as rnk
+    from Employee e join Department d on e.departmentId=d.id
 )
 
-select department,employee,salary
-from high_sal
-where as_sal=1;
+select Department, Employee, Salary
+from exam
+where rnk=1;
