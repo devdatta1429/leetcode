@@ -1,16 +1,17 @@
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
-        dic = {}
+        dic={}
 
-        # Count characters in magazine
         for i in magazine:
-            dic[i] = dic.get(i, 0) + 1
+            if i not in dic:
+                dic[i]=1
+            else:
+                dic[i]=dic[i]+1
 
-        # Use characters for ransomNote
         for i in ransomNote:
-            if i not in dic or dic[i] == 0:
+            if i not in dic or dic[i]==0:
                 return False
-
-            dic[i] -= 1
-
+            
+            dic[i]-=1
+        
         return True
