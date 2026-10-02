@@ -8,4 +8,4 @@ from logs)
 
 select distinct(num) as ConsecutiveNums 
 from cte
-where num = num1 and num1 = num2;
+where num = num1 and num = num2;
