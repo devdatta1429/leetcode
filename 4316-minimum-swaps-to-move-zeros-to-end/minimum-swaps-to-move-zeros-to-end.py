@@ -7,7 +7,7 @@ class Solution(object):
         while i< k:
             if nums[i]==0:
                 if nums[k]!=0:
-                    nums[i],nums[k]=nums[k],nums[i]
+                    nums[k],nums[i]=nums[i],nums[k]
                     l+=1
                     i+=1
                     k-=1
