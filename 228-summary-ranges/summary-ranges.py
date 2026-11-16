@@ -13,7 +13,6 @@ class Solution:
         while ind2 < len(nums):
             if nums[ind1]+1==nums[ind2]:
                 b = nums[ind2] 
-            
             else:
                 if a==b:
                     lst.append(str(a))
