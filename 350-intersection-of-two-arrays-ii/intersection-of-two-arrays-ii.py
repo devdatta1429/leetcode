@@ -1,7 +1,6 @@
 class Solution:
     def intersect(self, nums1: list[int], nums2: list[int]) -> list[int]:
         dic={}
-
         for i in nums1:
             if i in dic:
                 dic[i]+=1
@@ -14,18 +13,16 @@ class Solution:
                 lst.append(j)
                 dic[j]-=1
         return lst
-
-
-
-
+        # Complexity Analysis
+        # Time Complexity: O(n+m)
+        # Space Complexity: O(n)
 
         """
         Time: O(n × m)
         Space: O(min(n, m)) for the result in the worst case."""
-        """asd = []
-        for i in nums2:
-            if i in nums1:
-                asd.append(i)
-                nums1.remove(i)
-        return asd
-        """
+        # asd = []
+        # for i in nums2:
+        #     if i in nums1:
+        #         asd.append(i)
+        #         nums1.remove(i)
+        # return asd
