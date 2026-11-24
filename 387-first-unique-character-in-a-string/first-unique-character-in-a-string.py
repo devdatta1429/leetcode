@@ -1,13 +1,14 @@
-class Solution(object):
-    def firstUniqChar(self, s):
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
         dic={}
-        for i in s:
-            if i not in dic:
-                dic[i]=1
+        for i in range(len(s)):
+            if s[i] in dic:
+                dic[s[i]]=dic[s[i]]+1
             else:
-                dic[i]=dic[i]+1
+                dic[s[i]]=1
         
-        for j in range(0,len(s)):
-            if dic[s[j]]==1:
-                return j
+        for i in range(len(s)):
+            if dic[s[i]]==1:
+                return i
+            
         return -1
