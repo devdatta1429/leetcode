@@ -8,10 +8,11 @@ class Solution:
                 else:
                     dic[i]=1
         
-        for i in 'balon':
-            if i not in dic:
-                return 0
-    
+        # for i in 'balon':
+        #     if i not in dic:
+        #         return 0
+        if len(dic)!=5:
+            return 0
         a=0
         while 1<=dic['b']:
             if dic['b']>=1 and dic['a']>=1 and dic["l"]>=2 and dic['o']>=2 and dic['n']>=1:
