@@ -1,5 +1,14 @@
 class Solution:
     def sortedSquares(self, nums: list[int]) -> list[int]:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+
+        Why?
+        lst = [0] * n → O(n) time and O(n) space.
+        Two-pointer while loop → runs at most n times, so O(n).
+        lst[k] = value → O(1) per assignment."""
+
         n = len(nums)
         lst=[0]*n
 
@@ -16,15 +25,6 @@ class Solution:
                 a+=1
             k-=1
         return lst
-
-
-
-
-
-
-
-
-
 
 
     """Time Complexity: O(n²)
