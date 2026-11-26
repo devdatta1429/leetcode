@@ -11,6 +11,12 @@ class Solution:
                 current = current.next
             
         return head
+        """
+        Current	Next	Action
+           1	 1	  Skip duplicate
+           1	 2	  Move forward
+           2	 3	  Move forward
+           3	 3	  Skip duplicate"""
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
